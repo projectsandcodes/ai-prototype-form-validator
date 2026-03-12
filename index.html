@@ -11,7 +11,7 @@
 
     <pre id="output"></pre>
 
-    <script>
+    <!--script>
       document.getElementById("form").onsubmit = async (e) => {
         e.preventDefault();
         output.textContent = ""; // clears old JSON
@@ -31,6 +31,27 @@
         const json = await res.json();
         output.textContent = JSON.stringify(json, null, 2);
       };
-    </script>
+  </script -->
+    <script>
+  document.getElementById("form").onsubmit = async (e) => {
+    e.preventDefault();
+    output.textContent = ""; // clears old JSON
+
+    const data = {
+      name: name.value,
+      email: email.value,
+      message: message.value,
+    };
+
+    const res = await fetch("https://ai-prototype-form-validator.projectsandcodes.repl.co/validate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    const json = await res.json();
+    output.textContent = JSON.stringify(json, null, 2);
+  };
+</script>
   </body>
 </html>

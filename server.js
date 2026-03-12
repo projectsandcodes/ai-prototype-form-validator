@@ -6,6 +6,7 @@ app.use(bodyParser.json());
 
 app.post("/validate", (req, res) => {
   const { name, email, message } = req.body;
+  console.log("Received:", req.body);
 
   const issues = [];
 

@@ -6,7 +6,7 @@ import bodyParser from "body-parser";
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname,"frontend")));
 app.use(bodyParser.json());
 
 app.post("/validate", (req, res) => {

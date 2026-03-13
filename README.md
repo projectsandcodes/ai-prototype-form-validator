@@ -103,6 +103,9 @@ Replit's AI-Agent environment imposed unique limitations (port overrides, GitHub
 - **Resolving cross-origin issues**
 - **Aligning frontend and backend origins**
 - **Adapting to Replit's dynamic port assignment**
+- **Handling silent process exits caused by unhandled exceptions**  
+  During development, the Replit runtime surfaced unhandled exceptions that caused silent process exits.  
+  I added Express-level and process-level error handlers to ensure the service remained resilient and debuggable under failure conditions.
 
 ### ☁️ Cloud-Native Thinking
 

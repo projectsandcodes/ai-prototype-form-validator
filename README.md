@@ -122,6 +122,7 @@ The project is structured so it can be deployed to:
 The JSON output is intentionally human-readable to support debugging, testing, and future AI-assisted enhancements.
 
 ## 🧱 Architecture Overview
+
 [ Browser ]
 |
 |  POST /validate
@@ -131,10 +132,9 @@ v
 |  Validation Logic
 v
 [ JSON Response ]
-
 ```
+Code
 ```
-It’s simple, readable, and communicates the flow instantly.
 
 ## 💡 Why This Project Matters (Shopware Context)
 

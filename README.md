@@ -61,7 +61,7 @@ README.md
 **Prerequisites**
 - Node.js (v18 or later recommended)
 
-**Install dependencies
+**Install dependencies**
 ```
 npm install
 ```

@@ -20,7 +20,7 @@ Designed for clarity, resilience, and ease of testing.
 
 ---
 
-##🚀 Features
+## 🚀 Features
 - Server-side validation for name, email, and message
 
 - Inline field-level error messages
@@ -38,7 +38,7 @@ Designed for clarity, resilience, and ease of testing.
 - Clean, minimal UI with no external dependencies
 
 ---
-##🧪 Validation Rules
+## 🧪 Validation Rules
 - **Name:** must be at least 2 characters
 
 - **Email:** must match real-world TLD pattern (example@domain.com)
@@ -47,7 +47,7 @@ Designed for clarity, resilience, and ease of testing.
 
 ---
 
-##📁 Project Structure
+## 📁 Project Structure
 ```
 /frontend
    index.html
@@ -57,7 +57,7 @@ README.md
 ```
 ---
 
-##▶️ Running Locally
+## ▶️ Running Locally
 **Prerequisites**
 - Node.js (v18 or later recommended)
 
@@ -73,7 +73,7 @@ Server runs on http://localhost:5000 by default.
 
 ---
 
-##⚙️ Technical Notes
+## ⚙️ Technical Notes
 - Uses express and body-parser for request handling
 
 - Includes Express-level error middleware
@@ -86,7 +86,7 @@ Server runs on http://localhost:5000 by default.
 
 ---
 
-##👤 Author
+## 👤 Author
 Built by **Pradeep**
 
 - GitHub: https://github.com/projectsandcodes

@@ -135,7 +135,6 @@ The JSON output is intentionally human-readable to support debugging, testing, a
 ```
 ---
 
-
 ## 💡 Why This Project Matters (Shopware Context)
 
 This prototype demonstrates the exact qualities required for an **AI-Native Cloud Infrastructure Generalist**:

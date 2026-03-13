@@ -124,6 +124,7 @@ The JSON output is intentionally human-readable to support debugging, testing, a
 ## 🧱 Architecture Overview
 
 ```
+```
 [ Browser ]
      |
      | POST /validate
@@ -134,7 +135,7 @@ The JSON output is intentionally human-readable to support debugging, testing, a
      v
 [ JSON Response ]
 ```
-
+```
 ```
 ---
 

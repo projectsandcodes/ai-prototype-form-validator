@@ -123,18 +123,21 @@ The JSON output is intentionally human-readable to support debugging, testing, a
 
 ## 🧱 Architecture Overview
 
+```
 [ Browser ]
-|
-|  POST /validate
-v
+     |
+     | POST /validate
+     v
 [ Express Server ]
-|
-|  Validation Logic
-v
+     |
+     | Validation Logic
+     v
 [ JSON Response ]
 ```
-Code
 ```
+```
+---
+
 
 ## 💡 Why This Project Matters (Shopware Context)
 
@@ -176,8 +179,3 @@ The architecture is intentionally small:
 - zero unnecessary dependencies  
 
 This reflects a microservice mindset: build only what is needed, but build it well.
-
-
-
-
-The JSON output is intentionally human-readable to support debugging, testing, and future AI-assisted enhancements.

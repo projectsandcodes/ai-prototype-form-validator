@@ -120,3 +120,64 @@ The project is structured so it can be deployed to:
 ### 🤝 Developer Empathy
 
 The JSON output is intentionally human-readable to support debugging, testing, and future AI-assisted enhancements.
+
+## 🧱 Architecture Overview
+[ Browser ]
+|
+|  POST /validate
+v
+[ Express Server ]
+|
+|  Validation Logic
+v
+[ JSON Response ]
+
+```
+```
+It’s simple, readable, and communicates the flow instantly.
+
+## 💡 Why This Project Matters (Shopware Context)
+
+This prototype demonstrates the exact qualities required for an **AI-Native Cloud Infrastructure Generalist**:
+
+### **1. AI-Native Iteration**
+The project was built through rapid, incremental refinement — validating assumptions, debugging live, and adapting the architecture based on runtime behavior.
+
+### **2. Cloud-Native Resilience**
+The service now includes:
+- Express-level error handling  
+- Process-level crash protection  
+- Clear JSON responses for both success and failure  
+
+This mirrors real-world microservice hardening.
+
+### **3. Working Under Platform Constraints**
+Replit’s AI-Agent environment introduced:
+- Port overrides  
+- GitHub sync limitations  
+- Silent process exits  
+- Cross-origin restrictions  
+
+Each constraint required careful diagnosis and adaptation — a core skill in cloud infrastructure roles.
+
+### **4. Developer Empathy**
+The output is intentionally:
+- human-readable  
+- structured  
+- predictable  
+- easy to debug  
+
+This aligns with Shopware’s philosophy of empowering developers through clarity and simplicity.
+
+### **5. Production-Minded Minimalism**
+The architecture is intentionally small:
+- one endpoint  
+- one responsibility  
+- zero unnecessary dependencies  
+
+This reflects a microservice mindset: build only what is needed, but build it well.
+
+
+
+
+The JSON output is intentionally human-readable to support debugging, testing, and future AI-assisted enhancements.

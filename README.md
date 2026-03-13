@@ -1,26 +1,50 @@
-# AI-Assisted Form Validator Prototype
+# AI-Assisted Form Validator  
+A lightweight prototype demonstrating how AI-native workflows can enhance everyday developer tooling.  
+Built with **Node.js**, **Express**, and a minimal HTML/JS frontend.
 
-A lightweight prototype exploring how AI tools can accelerate rapid full‑stack development.  
-Built using Replit + Claude Code to validate user input using LLM‑based heuristics.
+---
 
-## Problem
-I wanted to test whether a simple form validator could use AI to detect ambiguous or incomplete user input beyond traditional regex rules.
+## 🚀 Overview  
+This prototype validates user-submitted form data (name, email, message) and returns structured JSON feedback.  
+It demonstrates:
 
-## Approach
-- Used Replit to scaffold a minimal Node.js backend and HTML UI.
-- Used Claude Code to generate validation logic, test cases, and alternative approaches.
-- Iterated quickly between prompts and code to refine the validator.
+- Clean separation between frontend and backend  
+- JSON-based validation pipeline  
+- Real-time feedback loop  
+- A minimal, production-friendly Express setup  
+- AI-native thinking: small, composable, testable components  
 
-## How AI Helped
-AI tools accelerated:
-- Boilerplate generation  
-- Edge‑case discovery  
-- Refactoring  
-- Rapid prototyping  
+This project was built as part of my application for the **AI-Native Cloud Infrastructure Generalist** role at **Shopware**.
 
-This allowed me to go from concept to working demo in a single session.
+---
 
-## Demo
-The Replit demo is available here:  
-(Insert your Replit link once created)
+## 🧩 Features  
+- **Client-side form** with a simple, intuitive UI  
+- **Server-side validation** for:
+  - Name length  
+  - Email format  
+  - Message completeness  
+- **JSON response output** for easy debugging  
+- **Stateless API endpoint** (`POST /validate`)  
+- **Minimal dependencies** for clarity and portability  
 
+---
+
+## 🛠️ Tech Stack  
+- **Node.js**  
+- **Express.js**  
+- **HTML + Vanilla JavaScript**  
+- **Replit (runtime)**  
+
+---
+
+## 📡 API Endpoint  
+### `POST /validate`
+
+**Request Body**
+```json
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "message": "Hello, this is a test message."
+}

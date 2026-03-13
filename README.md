@@ -120,11 +120,9 @@ The project is structured so it can be deployed to:
 ### 🤝 Developer Empathy
 
 The JSON output is intentionally human-readable to support debugging, testing, and future AI-assisted enhancements.
-```
+``` ```
 ## 🧱 Architecture Overview
 
-```
-```
 [ Browser ]
      |
      | POST /validate
@@ -134,8 +132,7 @@ The JSON output is intentionally human-readable to support debugging, testing, a
      | Validation Logic
      v
 [ JSON Response ]
-```
-```
+``` ```
 ```
 ---
 

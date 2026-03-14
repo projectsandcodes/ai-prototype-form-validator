@@ -1,6 +1,6 @@
 {
   "name": "ai-prototype-form-validator",
-  "author": "pradeep"
+  "author": "pradeep",
   "version": "1.0.0",
   "description": "Minimal Express-based form validator prototype",
   "main": "server.js",

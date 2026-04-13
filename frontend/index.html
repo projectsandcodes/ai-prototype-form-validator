@@ -182,7 +182,7 @@
       message: document.getElementById("message").value,
     };
 
-    const res = await fetch("/validate", {
+    const res = await fetch("https://ai-prototype-form-validator.onrender.com//validate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

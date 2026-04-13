@@ -2,8 +2,10 @@ import path from "path";
 import { fileURLToPath } from "url";
 import express from "express";
 import bodyParser from "body-parser";
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname,"frontend")));

@@ -1,3 +1,4 @@
+// Using ES modules for cleaner imports and modern Node.js compatibility
 import path from "path";
 import { fileURLToPath } from "url";
 import express from "express";
@@ -8,9 +9,11 @@ const app = express();
 app.use(cors());
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+// Serve the lightweight HTML frontend
 app.use(express.static(path.join(__dirname,"frontend")));
 app.use(bodyParser.json());
 
+// Core validation logic for name, email, and message fields
 app.post("/validate", (req, res) => {
   if (!req.body || typeof req.body !== "object") {
     return res.status(400).json({ valid: false, issues: ["Invalid request body."] });
@@ -29,6 +32,7 @@ app.post("/validate", (req, res) => {
   res.json({ valid: issues.length === 0, issues });
 });
 
+// Centralized error handler to catch unexpected issues
 app.use((err, req, res, next) => {
   console.error("Express error:", err);
   res.status(500).json({ valid: false, issues: ["Internal server error."] });
@@ -43,6 +47,7 @@ process.on("unhandledRejection", (reason) => {
 });
 
 const PORT = process.env.PORT || 5000;
+// Start the server (Render uses PORT from environment variables)
 app.listen(PORT, "0.0.0.0", () => console.log(`Server running on port ${PORT}`));
 
 export default app;

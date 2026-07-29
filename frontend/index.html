@@ -151,7 +151,7 @@
 
   const resetBtn = document.getElementById("resetBtn");
 
-  // Reset button logic
+  // Reset button logic: Clear all fields and reset UI state
   resetBtn.onclick = () => {
     formEl.reset();
     outputEl.textContent = "";
@@ -162,7 +162,7 @@
     document.getElementById("emailError").textContent = "";
     document.getElementById("messageError").textContent = "";
   };
-
+  // Send form data to backend for validation
   formEl.onsubmit = async (e) => {
     e.preventDefault();
 
@@ -181,7 +181,7 @@
       email: document.getElementById("email").value,
       message: document.getElementById("message").value,
     };
-
+    // Local development uses HTTP; production uses HTTPS on Render
     const res = await fetch("https://ai-prototype-form-validator.onrender.com/validate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -192,6 +192,7 @@
 
     // Inline errors
     if (!json.valid) {
+      // Display field-specific validation errors
       json.issues.forEach(issue => {
         if (issue.includes("Name")) document.getElementById("nameError").textContent = issue;
         if (issue.includes("Email")) document.getElementById("emailError").textContent = issue;
@@ -200,6 +201,7 @@
 
       // Validation summary
       summaryBox.style.display = "block";
+      // Show a summary of all validation issues
       summaryBox.innerHTML = "<strong>Summary:</strong><br>" + json.issues.join("<br>");
     }
 

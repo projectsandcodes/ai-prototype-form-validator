@@ -20,12 +20,18 @@ app.post("/validate", (req, res) => {
   }
 
   const { name, email, message } = req.body;
+  const trimmedName = name.trim();
+  const nameRegex = /^[A-Za-z]+(?: [A-Za-z]+)*$/;
   console.log("Received:", req.body);
 
   const issues = [];
   const emailRegex = /^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/;
 // Basic validation
-  if (!name || name.length < 2) issues.push("Name seems too short.");
+  if (!trimmedName || trimmedName.length < 2) {
+    issues.push("Name seems too short.");
+  } else if (!nameRegex.test(trimmedName)) {
+    issues.push("Name must contain only alphabetic characters.");
+  }
   if (!email || !emailRegex.test(email)) issues.push("Email format looks incorrect.");
   if (!message || message.length < 10) issues.push("Message appears incomplete.");
 
